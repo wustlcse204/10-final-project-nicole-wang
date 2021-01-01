@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang='en' class="htmlPage">
+    <head>
+        <title>CSE204 Final Project</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="function.js"></script>
+    </head>
+
+    <body>
+        <div class="nav">
+          <a href="#">Home</a>
+          <a href="movieSearch.html">MovieSearch</a>
+          <a href="contactUs.html">Contact</a>
+        </div>
+
+          <div id="home">
+            <div id="homePicture"></div>
+            <div id="homeContent">
+                <h1>Movie Finder</h1>
+                <h4>This website allows users search movies and build their own favorite movie list.</h4>
+                <button id="homeButton">Login</button>
+          </div>
+        </div>
+
+        <!--login-->
+        <div class='signInModal form-popup'>
+            <div class="modal-content">
+                <div id="closeSignIn">+</div>
+                <p>Username: <input type="text" id="usernameSignIn"  placeholder="Username"></p>
+                <p>Password: <input type="password" id="passwordSignIn" placeholder="Password"></p>
+                <button type="Submit" class="btn" id="signInBn">Login</button>
+                <button type="button" class="btn" id="signUp">Sign up</button>
+            </div>
+        </div>
+
+        <!-- sign up -->
+        <div class='signUpModal form-popup'>
+            <div class="modal-content">
+                <div id="closeSignUp">+</div>
+                <p>Username: <input type="text" id="usernameSignUp" placeholder="Username"></p>
+                <p>Password: <input type="password" id="passwordSignUp" placeholder="Password"></p>
+                <p>Retype Password: <input type="password" id="rpasswordSignUp" placeholder="Retype Password"></p>
+                <button type="Submit" class="btn" id="signIn">Login</button>
+                <button type="Submit" class="btn" id="signUpBn">Sign Up</button>
+            </div>
+        </div>
+        
+        <script>
+          document.getElementById("homeButton").addEventListener("click", signIn, false);
+          document.getElementById("signUp").addEventListener("click", signUp, false);
+          document.getElementById("signIn").addEventListener("click", signIn, false);
+          document.getElementById("closeSignIn").addEventListener("click", closeSignInSignUpForm, false);
+          document.getElementById("closeSignUp").addEventListener("click", closeSignInSignUpForm, false);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,324 @@
+body, .htmlPage
+{
+    height: 100%;
+    margin: 0;
+    background-color:#0a1526;
+}
+
+p
+{
+    font-weight: bold;
+    line-height: 20pt;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .nav a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+#home
+{
+    display: grid;
+    margin: -20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));;
+    height: 100%;
+    background-color: #0a1526;
+}
+
+#homePicture
+{
+    background-image: url("home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin-left: 2%;
+    opacity: 80%;
+}
+
+#homeContent
+{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    color: #a62c39;
+    text-shadow: 2px 2px #3d1a32;
+}
+
+#homeButton
+{
+    background-color: #a62c39;
+    border: none;
+    color: #fafafa;
+    margin-top: 5%;
+    padding: 5% 20%;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* login/signup */
+.signInModal, .signUpModal
+{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content
+{
+    width:  300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+.input
+{
+    width: 80%;
+    display: black;
+    margin: 50px auto;  /* distance between two input box */
+}
+
+.btn {
+    background-color: #a62c39;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom:10px;
+    opacity: 0.8;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+#closeSignIn, #closeSignUp
+{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+/* movie search */
+#movieSearch
+{
+    height: 100%;
+    width: 100%;
+    background-color: #0a1526;
+}
+
+#searchBar
+{
+    border-bottom: 1px solid grey;
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    background: white;
+    z-index: 1;
+    text-align: center;
+}
+
+#search
+{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 40px;
+    width: 300px;
+    background-color: lightgrey;
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position-x: 60px;
+    background-size: 20px;
+}
+
+#search:focus
+{
+    background-color: #BDE5F8;
+}
+
+#container
+{
+    padding-top: 70px;
+    float: left;
+    width: 65%;
+    margin-top: 7%;
+    background-color: #0a1526;
+}
+
+.outsideBox
+{
+    position: relative;
+    border: 1px solid grey;
+    background-color: white;
+    margin: 3%;
+    margin-bottom: 5%;
+    height: 280px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.movieImg
+{
+    height: 277px;
+    width: 186px;
+}
+
+.leftDiv
+{
+    float: left;
+    height: 277px;
+}
+
+.rightDiv
+{
+    float: right;
+    width: 70%;
+    height: 277px;
+    padding-top: 5%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1050px)
+{
+    .rightDiv
+    {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 770px)
+{
+    .rightDiv
+    {
+        width: 100%;
+        border: 1px solid grey;
+        background-color: white;
+    }
+    
+    .leftDiv
+    {
+        display: none;
+    }
+
+    .outsideBox
+    {
+        border: none;
+        background-color: #0a1526;
+    }
+}
+
+/* pop window for movie detail and signIn/signUp */
+/* https://www.w3schools.com/howto/howto_js_popup_form.asp */
+.form-popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:50px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.7);
+  }
+
+/* favorite list */
+#favoritesContent
+{
+    width: 30%;
+    float: right;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+
+#favoriteListTitle
+{
+    color: #a62c39;
+}
+
+/* Contact Us */
+/* https://bootsnipp.com/snippets/7nmOW#comments */
+.contact-form{
+    background-color: #848c94;
+    margin-top: 100px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+}
+.contact-form form{
+    padding: 7%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 3%;
+    margin-top: -5%;
+    text-align: center;
+    color: #a62c39;
+    text-shadow: #fafafa;
+}
+.contact-form .btnContact, .btn-submit {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background:  #a62c39;
+    font-weight: 600;
+    color: #fafafa;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #a62c39;
+    border: none;
+    cursor: pointer;
+}

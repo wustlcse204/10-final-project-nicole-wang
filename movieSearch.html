@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='en' class="htmlPage">
+    <head>
+        <title>CSE204 Final Project</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="function.js"></script>
+    </head>
+
+    <body>
+        <div class="nav">
+          <a href="index.html">Home</a>
+          <a href="#">MovieSearch</a>
+          <a href="contactUs.html">Contact</a>
+        </div>
+
+        <div id="movieSearch">
+            <div id="searchBar">
+              <input id="search" type="text" placeholder="Search">
+            </div>
+            <div id="container"></div>
+  
+          <div id="favoritesContent">
+            <h1 id="favoriteListTitle">Favorite List</h1>
+            <ul id="favoriteList" class="list-group"></ul>
+          </div>
+        </div>
+
+        <script>
+          document.getElementById("search").addEventListener("change", searchMovie, false);
+          document.addEventListener("DOMContentLoaded", loadFavoriteList);
+        </script>
+    </body>
+</html>
